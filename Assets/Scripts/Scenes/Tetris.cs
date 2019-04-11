@@ -37,7 +37,7 @@ public class Tetris : MonoBehaviour {
 	bool _bPlay;
 	bool _bStop;
 	Transform _iSPItem;
-	AudioMgr adMgr;
+	//AudioMgr adMgr;
 
 	// Use this for initialization
 	void Start () {
@@ -68,7 +68,7 @@ public class Tetris : MonoBehaviour {
 		}
 		goTips = transform.Find ("goTips");
 		_sprite = Resources.Load<Sprite> ("Res/btnGrid");
-		adMgr = AudioMgr.getInstance ();
+		//adMgr = AudioMgr.getInstance ();
 	}
 
 	void initShow(){
@@ -152,7 +152,7 @@ public class Tetris : MonoBehaviour {
 	}
 
 	void onStart(){
-		adMgr.PlaySound ("click");
+		//adMgr.PlaySound ("click");
 		reset ();
 		_idx = getNext ();
 		getItem ();
@@ -161,7 +161,7 @@ public class Tetris : MonoBehaviour {
 	}
 
 	void onLeft(){
-		adMgr.PlaySound ("click");
+		//adMgr.PlaySound ("click");
 		if (_item == null)
 			return;
 		var iRow = _iRow;
@@ -180,7 +180,7 @@ public class Tetris : MonoBehaviour {
 	}
 
 	void onRight(){
-		adMgr.PlaySound ("click");
+		//adMgr.PlaySound ("click");
 		if (_item == null)
 			return;
 		var iRow = _iRow;
@@ -217,7 +217,7 @@ public class Tetris : MonoBehaviour {
 	}
 
 	void onStop(){
-		adMgr.PlaySound ("click");
+		//adMgr.PlaySound ("click");
 		_bStop = !_bStop;
 		if (_bStop == true) {
 			if (_playItem != null)
@@ -253,7 +253,7 @@ public class Tetris : MonoBehaviour {
 	}
 
 	void onDown(){
-		adMgr.PlaySound ("click");
+		//adMgr.PlaySound ("click");
 		if (_item == null)
 			return;
 		_iLine++;
@@ -286,7 +286,7 @@ public class Tetris : MonoBehaviour {
 	}
 		
 	void onConvert(){
-		adMgr.PlaySound ("click");
+		//adMgr.PlaySound ("click");
 		if (_item != null){
 			if (_idx == 3)
 				return;

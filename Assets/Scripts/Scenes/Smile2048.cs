@@ -20,7 +20,7 @@ public class Smile2048 : MonoBehaviour {
 	List<Vector2> lVect = new List<Vector2> ();
 	Transform goTips;
 	Text labScore;
-	AudioMgr adMgr;
+	//AudioMgr adMgr;
 
 	// Use this for initialization
 	void Start () {
@@ -42,7 +42,7 @@ public class Smile2048 : MonoBehaviour {
 		_iScore = 0;
 		var goTop = transform.Find ("goTop");
 		labScore = goTop.GetChild (0).GetComponent<Text> ();
-		adMgr = AudioMgr.getInstance ();
+		//adMgr = AudioMgr.getInstance ();
 		var goPlay = transform.Find ("goPlay");
 		for (int i = 0; i < IMAX; i++) {
 			var item = goPlay.GetChild (i + 1);
@@ -226,7 +226,7 @@ public class Smile2048 : MonoBehaviour {
 		
 	void onAddItem(){
 		if (lIdx.Count >= IMAX) {
-			adMgr.PlaySound ("lose");
+			//adMgr.PlaySound ("lose");
 			showTipsSP ("lose");
 			_bOver = true;
 			return;

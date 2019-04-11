@@ -31,7 +31,7 @@ public class Lobby : MonoBehaviour
             var item = btns.GetChild(i).GetComponent<Button>();
             var idx = i;
             item.onClick.AddListener(delegate {
-                if (idx > 2) return;
+                if (idx > 2) return;//数独还没完成？
                 SceneManager.LoadScene(tMenuItem[idx]);
             });
         }
